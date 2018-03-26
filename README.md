@@ -1,3 +1,3 @@
-# Resolution System d'equations Lineaires
+# Resolution d'un Système d'equations Lineaires
 
-
+## Methode LU
