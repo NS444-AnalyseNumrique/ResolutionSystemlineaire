@@ -31,14 +31,15 @@ def decomp_LU (A):
     for p in np.arange(n-1):
         for j in np.arange(p+1, n):
             somme=0
-            for k in np.arange(n-1):
+
+
                 somme += L[p+1,k]*U[k,j]
 
             U[p+1,j]=(A[p+1,j]-somme)/L[p+1,p+1]
         
         for i in np.arange(p+2,n):
             somme=0
-            for k in np.arange(n-1):
+
                 somme += L[i,k]*U[k,p+1]
             L[i,p+1]=(A[i,p+1]-somme)/U[p+1,p+1]
 
