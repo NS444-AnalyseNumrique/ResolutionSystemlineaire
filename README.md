@@ -12,5 +12,6 @@
    - [JAVA](JAVA/src/TP02/resolutionSL.java)
       - [Class Matrix](JAVA/src/TP02/Matrix.java) 
    - [C/C++](Cpp/SolveLU/SolveLU/SolveLU.cpp)
-      - [Class Matrix](Cpp/SolveLU/SolveLU/Matrix.h) 
+      - [Class Matrix .h](Cpp/SolveLU/SolveLU/Matrix.h) 
+      - [Class Matrix .cpp](Cpp/SolveLU/SolveLU/Matrix.cpp) 
 
