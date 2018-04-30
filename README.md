@@ -7,5 +7,6 @@
    - [Script MATLAB/Octave](MATLAB/TP02/)
    - [Python](Python/TP02/circuit_elec.py)
    - [JAVA](JAVA/src/TP02/)
-   - [C/C++](Cpp/SolveLU/SolveLU/)
+   - [C/C++](Cpp/SolveLU/SolveLU/SolveLU.cpp)
+      - [Class Matrix](Cpp/SolveLU/SolveLU/Matrix.h) 
 
