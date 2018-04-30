@@ -14,4 +14,11 @@
 	<natures>
 		<nature>org.eclipse.jdt.core.javanature</nature>
 	</natures>
+	<linkedResources>
+		<link>
+			<name>JAVA</name>
+			<type>2</type>
+			<location>E:/Users/Bilal/Documents/GitHub/ResolutionF-x-/JAVA</location>
+		</link>
+	</linkedResources>
 </projectDescription>
