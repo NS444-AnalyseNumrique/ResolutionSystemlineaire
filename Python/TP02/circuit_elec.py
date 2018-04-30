@@ -32,6 +32,7 @@ def decomp_LU (A):
         for j in np.arange(p+1, n):
             somme=0
 
+            for k in np.arange(p+1):
 
                 somme += L[p+1,k]*U[k,j]
 
@@ -39,6 +40,7 @@ def decomp_LU (A):
         
         for i in np.arange(p+2,n):
             somme=0
+            for k in np.arange(p+1):
 
                 somme += L[i,k]*U[k,p+1]
             L[i,p+1]=(A[i,p+1]-somme)/U[p+1,p+1]
