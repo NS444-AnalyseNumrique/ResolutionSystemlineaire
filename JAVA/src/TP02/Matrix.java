@@ -1,32 +1,41 @@
 package TP02;
 /**
- * 
- * 
+ * NS444 - TP Analyse Numerique
+ * Class Matrix
+ * permet de manipuler les matrices sous JAVA
  * @author B BOUALEM
  *
  */
 public class Matrix {
-		public int col;
-		public int lin;
-		public double[][] val;
+		private int col;// nombre de colonnes
+		private int lin;// nombre de lignes
+		public double[][] val;// les valeurs 
 		
-		public Matrix (int x, int y)
+		public Matrix (int x, int y)// constructeur
 		{
 			this.lin = x;
 			this.col = y;
 			this.val= new double [this.lin][this.col];
 		}
-		
-		public double get(int i, int j)
+		public int getLin()
+		{
+			return this.lin;
+		}
+		public int getCol()
+		{
+			return this.col;
+		}
+		// methode java qui retourne a valeur de l'element i,j de la matrice
+		public double get(int i, int j) 
 		{
 			return this.val[i][j];
 		}
-		
+		// methode qui affecte a a l'element i,j de la matrice
 		public void set (int i, int j, double a)
 		{
 			this.val[i][j]=a;
 		}
-		
+		// methode qui additionne l'instance de Matrix avec la matrice M
 		public Matrix add (Matrix M)
 		{
 			Matrix out = new Matrix (this.lin,this.col);
@@ -35,6 +44,7 @@ public class Matrix {
 					out.val[i][j]=this.val[i][j]+M.val[i][j];
 			return out;
 		}
+		// methode qui calcul le resultat de la soustraction entre l'instance de Matrix et la matrice M
 		public Matrix sub (Matrix M)
 		{
 			Matrix out = new Matrix (this.lin,this.col);
@@ -43,6 +53,7 @@ public class Matrix {
 					out.val[i][j]=this.val[i][j]-M.val[i][j];
 			return out;
 		}
+		// methode qui calcul la multiplication entre l'instance de Matrix et la matrice M
 		public Matrix mul (Matrix M)
 		{
 			Matrix out = new Matrix (this.lin,M.col);
@@ -56,6 +67,7 @@ public class Matrix {
 				}
 			return out;
 		}
+		// methode qui decompose l'instance de Matrix en matrice L et U
 		public void LU(Matrix L,Matrix U)
 		{
 			int n = this.lin;
@@ -87,6 +99,7 @@ public class Matrix {
 				}
 			}
 		}
+		// methode qui resouds le probleme L z = B
 		public static Matrix descente (Matrix L,  Matrix B)
 		{
 			
@@ -105,6 +118,7 @@ public class Matrix {
 			
 			return z;
 		}
+		// methode qui resouds le probleme U x = z
 		public static Matrix montee (Matrix U,  Matrix z)
 		{
 			
@@ -123,6 +137,7 @@ public class Matrix {
 			
 			return x;
 		}
+		// methode qui retourne la norme de la matrice
 		public double norm()
 		{
 			double out=0.0;
@@ -131,6 +146,7 @@ public class Matrix {
 					out+=Math.pow(this.val[i][j],2);
 			return Math.sqrt(out);
 		}
+		// methode qui convertit la matrice en chaine de caractere (tres utilise en affichage )
 		public String toString()
 		{
 			String out="";
