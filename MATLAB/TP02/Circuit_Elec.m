@@ -1,6 +1,6 @@
 clear all
 clc
-% les résistances
+% les rÃ©sistances
 R1=2;
 R2=2;
 R3=3;
@@ -20,7 +20,7 @@ R-(L*U)%Verifier que R = L*U
 z=descente(L,V)
 % Resoudre le probleme U x = z
 x = montee (U,z)
-V-(R*x) % verifier que R*i = Vffffff
+V-(R*x) % verifier que R*i = V
 % Calcul des cinq courants
 I(2:4) = x;
 I(1)= I(2)+ I(3);
